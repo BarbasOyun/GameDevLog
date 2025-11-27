@@ -11,8 +11,8 @@ const nextConfig = {
   images: {
     unoptimized: true // Required for static export
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/your-repo-name' : '', // Replace with your repo name
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/your-repo-name/' : '', // Replace with your repo name
+  basePath: process.env.NODE_ENV === 'production' ? '/GameDevLog' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/GameDevLog/' : '',
 }
 
 module.exports = nextConfig
