@@ -1,28 +1,28 @@
 import { getAllCategories, getAllBlogsByCategory } from '../lib/log-utils';
 import LogWindow from '../components/log-window';
 
-interface PageProps {
-    searchParams: { [key: string]: string | string[] | undefined };
-}
+// interface PageProps {
+//     searchParams: { [key: string]: string | string[] | undefined };
+// }
 
-export default async function LogsPage({ searchParams }: PageProps) {
+export default async function LogsPage() { // { searchParams }: PageProps
     const categories = getAllCategories();
 
     // Fetch data for each category based on URL parameters
     const categoryData = await Promise.all(
         categories.map(async (category) => {
-            const pageParam = await searchParams;
-            var page = typeof pageParam.page === 'string' ? parseInt(pageParam.page) : 1;
+            // const pageParam = await searchParams;
+            // var page = typeof pageParam.page === 'string' ? parseInt(pageParam.page) : 1;
 
-            if (Number.isNaN(page)) {
-                page = 1
-            }
+            // if (Number.isNaN(page)) {
+            //     page = 1
+            // }
 
             const data = await getAllBlogsByCategory(category);
             return {
                 category,
                 blogs: data,
-                currentPage: page
+                currentPage: 1// page
             };
         })
     );
