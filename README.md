@@ -1,3 +1,3 @@
 # BarbasOyun : Game Dev Log
 
-![Project Screenshot](/public/images/screenshot.png)
+![Project Screenshot](/public/images/GameDevLog.png)
