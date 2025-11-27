@@ -1,18 +1,14 @@
-// import type { NextConfig } from "next";
+const isProd = process.env.NODE_ENV === 'production'
+const repoName = 'GameDevLog' // CHANGE THIS
 
-// const nextConfig: NextConfig = {
-//   /* config options here */
-// };
-
-// export default nextConfig;
 const nextConfig = {
-  output: 'export',
+  output: isProd ? 'node .next/standalone/server.js' : 'export',
   trailingSlash: true,
   images: {
     unoptimized: true // Required for static export
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/GameDevLog' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/GameDevLog/' : '',
+  basePath: isProd ? `/${repoName}` : '',
+  assetPrefix: isProd ? `/${repoName}/` : '',
 }
 
 module.exports = nextConfig

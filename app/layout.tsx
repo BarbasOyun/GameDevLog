@@ -27,6 +27,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Add base tag for production */}
+        {process.env.NODE_ENV === 'production' && (
+          <base href={`https://barbasoyun.github.io${basePath}/`} />
+        )}
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
