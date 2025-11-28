@@ -1,5 +1,6 @@
 // app/about/page.tsx
 import Image from 'next/image'
+import GitHubImage from '../components/github-image';
 
 export default function About() {
     return (
@@ -15,15 +16,13 @@ export default function About() {
 
                 {/* Cat Dev Section */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
-                    <div>
-                        <Image
-                            src="/images/Stremtch_02 - Copy.png"
-                            alt="Real Barbas"
-                            width={500}
-                            height={400}
-                            className="rounded-2xl shadow-lg"
-                        />
-                    </div>
+                    <GitHubImage
+                        src="/images/Stremtch_02 - Copy.png"
+                        alt="Real Barbas"
+                        width={500}
+                        height={400}
+                        className="rounded-2xl shadow-lg h-auto w-full"
+                    />
                     <div>
                         <h2 className="text-3xl font-bold text-gray-900 mb-6">BarbasOyun</h2>
                         <p className="text-gray-600 mb-4">

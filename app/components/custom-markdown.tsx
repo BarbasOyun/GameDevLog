@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import GitHubImage from '../components/github-image';
 
 interface CustomMarkdownProps {
     content: string;
@@ -16,8 +17,6 @@ export default function CustomMarkdown({ content, className = '' }: CustomMarkdo
                 return <div key={index} className="h-4" />; // Preserve vertical space
             }
 
-            {/* (max-width: 768px) 100vw, (max-height: 1200px) 50vw, 33vw*/ }
-            {/*layout="intrinsic"*/ }
             // Handle images: ![alt text](image-url)
             const imageMatch = line.match(/!\[(.*?)\]\((.*?)\)/);
             if (imageMatch) {
@@ -30,7 +29,7 @@ export default function CustomMarkdown({ content, className = '' }: CustomMarkdo
                             maxWidth: `${600}px`,
                             height: 'auto'
                         }}>
-                            <Image
+                            <GitHubImage
                                 src={imageUrl}
                                 alt={altText || 'Markdown image'}
                                 width={400}

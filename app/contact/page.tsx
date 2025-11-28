@@ -1,15 +1,16 @@
 import Image from 'next/image';
+import GitHubImage from '../components/github-image';
 
 export default function Home() {
     return (
         <main className="relative h-screen w-full overflow-hidden">
-            <Image
+            <GitHubImage
                 src="/images/RedRoc_05.png"
                 alt="Background"
                 fill
-                quality={100}
-                priority
-                sizes="100vw"
+                // quality={100}
+                // priority
+                // sizes="100vw"
                 className="object-cover"
             />
 

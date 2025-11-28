@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { BlogPost } from '../lib/log-utils';
 import ReactMarkdown from 'react-markdown';
 import CustomMarkdown from './custom-markdown'
+import GitHubImage from './github-image';
 
 interface BlogLightboxProps {
     blog: BlogPost | null;
@@ -60,12 +61,12 @@ export default function BlogLightbox({ blog, isOpen, onClose }: BlogLightboxProp
             >
                 {/* Header with image */}
                 <div className="relative h-64 md:h-80">
-                    <Image
+                    <GitHubImage
                         src={blog.image}
                         alt={blog.title}
                         fill
                         className="object-cover"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 60vw"
+                        // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 60vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
 

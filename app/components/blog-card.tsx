@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import GitHubImage from './github-image';
 import { BlogPost } from '../lib/log-utils';
 
 interface BlogCardProps {
@@ -24,12 +25,12 @@ export default function BlogCard({ blog, onCardClick }: BlogCardProps) {
         >
             {/* Blog Image */}
             <div className="relative h-48 w-full">
-                <Image
+                <GitHubImage
                     src={blog.image}
                     alt={blog.title}
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-300"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
                 {/* Category Badge */}
                 <div className="absolute top-3 left-3">

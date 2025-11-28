@@ -22,7 +22,7 @@ export default async function LogsPage() { // { searchParams }: PageProps
             return {
                 category,
                 blogs: data,
-                currentPage: 1// page
+                currentPage: 1 // page
             };
         })
     );

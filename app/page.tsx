@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { getAllCategories, getAllBlogsByCategory } from './lib/log-utils';
 import LogWindow from './components/log-window';
 import ScrollToButton from './components/scroll-button'
+import GitHubImage from './components/github-image';
 
 export default async function Home() {
     const categories = getAllCategories();
@@ -21,7 +22,7 @@ export default async function Home() {
         <div>
             {/* Hero Section with Background Image */}
             <section className="relative h-screen">
-                <Image
+                <GitHubImage
                     src="/images/RedRoc_05.png"
                     alt="Background"
                     fill
@@ -62,12 +63,12 @@ export default async function Home() {
                                     <br></br>
                                     I try to include link to academic papers / resources when possible</p>
                             </div>
-                            <Image
+                            <GitHubImage
                                 src="/images/Let-Him-Cook.png"
                                 alt="let him cook"
                                 width={100}
                                 height={100}
-                                className="rounded-lg w-full h-auto"
+                                className="rounded-lg w-full h-auto w-full"
                             />
                         </div>
                     </div>
@@ -90,10 +91,6 @@ export default async function Home() {
                                     />
                                 ))}
                             </div>
-                        </div>
-
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
                         </div>
 
                         {categories.length === 0 && (

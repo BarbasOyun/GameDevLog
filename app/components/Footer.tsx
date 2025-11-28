@@ -11,9 +11,9 @@ export default function Footer() {
                     </div>
                     <div className="mb-4 md:mb-0">
                         <div className="flex space-x-6">
+                            <Link href="/" className="hover:text-blue-400 transition-colors md:mb-2">Home</Link>
                             <Link href="/about" className="hover:text-blue-400 transition-colors md:mb-2">About</Link>
                             <Link href="/contact" className="hover:text-blue-400 transition-colors md:mb-2">Contact</Link>
-                            <Link href="/" className="hover:text-blue-400 transition-colors md:mb-2">Dev Log</Link>
                         </div>
                         <div className="flex space-x-6">
                             <a
