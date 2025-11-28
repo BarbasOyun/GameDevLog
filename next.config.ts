@@ -1,5 +1,5 @@
 const isProd = process.env.NODE_ENV === 'production'
-const repoName = 'GameDevLog' // CHANGE THIS
+const repoName = 'GameDevLog'
 
 const nextConfig = {
   output: 'export',
