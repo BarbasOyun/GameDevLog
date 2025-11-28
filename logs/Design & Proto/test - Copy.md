@@ -1,7 +1,7 @@
 ---
 title: "Major Server Update Completed"
 date: "2024-01-15T14:30:00Z"
-image: "/images/brain.png"
+image: "/images/Brain.png"
 author: "Admin Team"
 excerpt: "Successfully deployed the latest server update with enhanced security features and performance improvements."
 tags: ["server", "update", "security", "performance"]
